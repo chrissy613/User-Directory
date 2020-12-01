@@ -30,25 +30,29 @@ class EmployeeContainer extends Component {
     const employees = this.state.results
 
     return (
-      <Container>
-        <Row>
-          <Col size="md-12">
-            <Header />
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-12">
-            <Search handleInputChange={this.handleInputChange} />
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-12">
-            <EmployeeDetail
-              employees={employees}
-            />
-          </Col>
-        </Row>
-      </Container>
+      <div>
+        <Route>
+          <Container exact path="/User-Directory">
+            <Row>
+              <Col size="md-12">
+                <Header />
+              </Col>
+            </Row>
+            <Row>
+              <Col size="md-12">
+                <Search handleInputChange={this.handleInputChange} />
+              </Col>
+            </Row>
+            <Row>
+              <Col size="md-12">
+                <EmployeeDetail
+                  employees={employees}
+                />
+              </Col>
+            </Row>
+          </Container>
+        </Route>
+      </div>
       );
   }
 }
