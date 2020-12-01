@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Container from "./Container.js";
 import Row from "./Row.js";
 import Col from "./Col.js";
-import Header from "./Header.js";
 import Search from "./Search.js";
 import EmployeeDetail from "./EmployeeDetail.js";
 import API from "../utils/API";
@@ -30,13 +29,7 @@ class EmployeeContainer extends Component {
     const employees = this.state.results
 
     return (
-      <Route exact path="/">
         <Container>
-          <Row>
-            <Col size="md-12">
-              <Header />
-            </Col>
-          </Row>
           <Row>
             <Col size="md-12">
               <Search handleInputChange={this.handleInputChange} />
@@ -50,7 +43,6 @@ class EmployeeContainer extends Component {
             </Col>
           </Row>
         </Container>
-      </Route>
     );
   }
 }
