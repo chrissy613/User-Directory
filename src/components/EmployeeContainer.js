@@ -5,7 +5,7 @@ import Col from "./Col.js";
 import Header from "./Header.js";
 import Search from "./Search.js";
 import EmployeeDetail from "./EmployeeDetail.js";
-import API from "../utils/API";
+import API from "./API";
 import { Route, Switch } from "react-router-dom";
 
 class EmployeeContainer extends Component {
