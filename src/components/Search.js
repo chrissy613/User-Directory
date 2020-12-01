@@ -5,11 +5,13 @@ function Search(props) {
     return (
         <div>
             <input 
-            type="text" 
-            name="search" 
             onChange={props.handleInputChange}
-            value={props.search} 
-            placeholder="Enter an employee's name to search!"
+            value={props.value}
+            name="search"
+            type="text"
+            className="form-control"
+            placeholder="Search for an employee!"
+            id="search"
             />
         </div>
     )
