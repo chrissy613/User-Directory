@@ -6,6 +6,7 @@ import Header from "./Header.js";
 import Search from "./Search.js";
 import EmployeeDetail from "./EmployeeDetail.js";
 import API from "../utils/API";
+import { Route, Switch } from "react-router-dom";
 
 class EmployeeContainer extends Component {
   state = {
@@ -29,25 +30,27 @@ class EmployeeContainer extends Component {
     const employees = this.state.results
 
     return (
-      <Container>
-        <Row>
-          <Col size="md-12">
-            <Header />
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-12">
-            <Search handleInputChange={this.handleInputChange} />
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-12">
-            <EmployeeDetail
-              employees={employees}
-            />
-          </Col>
-        </Row>
-      </Container>
+      <Route exact path="/">
+        <Container>
+          <Row>
+            <Col size="md-12">
+              <Header />
+            </Col>
+          </Row>
+          <Row>
+            <Col size="md-12">
+              <Search handleInputChange={this.handleInputChange} />
+            </Col>
+          </Row>
+          <Row>
+            <Col size="md-12">
+              <EmployeeDetail
+                employees={employees}
+              />
+            </Col>
+          </Row>
+        </Container>
+      </Route>
     );
   }
 }
